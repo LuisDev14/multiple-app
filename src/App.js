@@ -22,9 +22,9 @@ function App() {
         <div className="flex gap-4">
 
           <Link to="/hola-mundo" className="font-bold text-2xl text-blue-700"  >Hola mundo</Link>
-          <Link to="/otra-pagina" className="font-bold text-2xl text-blue-700"  >tra Nueva pagina</Link> 
+          <Link to="/otra-pagina" className="font-bold text-2xl text-blue-700"  >Nueva pagina</Link> 
           <Link to="/ref" className="font-bold text-2xl text-blue-700">UseRef</Link> 
-          <Link to="/componente-controlado" className="font-bold text-2xl text-blue-700">componente controlado</Link> 
+          <Link to="/componente-controlado" className="font-bold text-2xl text-blue-700">componente-controlado</Link> 
           <Link to="/contador" className="font-bold text-2xl text-blue-700">Contador</Link> 
           <Link to="/todo" className="font-bold text-2xl text-blue-700">Lista-Todo</Link> 
         </div>
