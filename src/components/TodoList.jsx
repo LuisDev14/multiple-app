@@ -6,14 +6,26 @@ const TodoList = () => {
   const [inputValue, setInputValue] = useState("");
   const { list, addTodo, removeTodo, updateTodo } = useTodo();
 
+  const newTodo = () => {
+    addTodo(inputValue);
+  };
+
   return (
-    <div className="flex-1 w-full flex flex-col gap-4 px-4">
-      <form action="">
-        <input type="text" onChange={({target})=>{setInputValue(target.value)}} />
-        <button onClick={()=>{addTodo(inputValue)}}>Guardar</button>
-      </form>
+    <div className="bg-gray-200 flex-1 w-full flex flex-col gap-4 p-4">
+      <div className="flex gap-4">
+        <input
+          type="text"
+          placeholder="Nueva tarea"
+          onChange={({ target }) => {
+            setInputValue(target.value);
+          }}
+        />
+        <button className="bg-green-300 p-2 font-bold" onClick={newTodo}>
+          Añadir
+        </button>
+      </div>
       <ul>
-        {list.map((todo,index) => () => (
+        {list.map((todo, index) => () => (
           <TodoItem
             todo={todo}
             removeTodo={removeTodo}
@@ -25,4 +37,5 @@ const TodoList = () => {
     </div>
   );
 };
+
 export default TodoList;

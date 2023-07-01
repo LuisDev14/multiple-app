@@ -6,6 +6,7 @@ import RefComponent from "./components/RefComponent";
 import ControlledComponent from "./components/ControlledComponent";
 import CounterComponent from "./components/CounterComponent";
 import TodoList from "./components/TodoList";
+import ReducerComponent from "./components/ReducerComponent";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -27,6 +28,7 @@ function App() {
           <Link to="/componente-controlado" className="font-bold text-2xl text-blue-700">componente-controlado</Link> 
           <Link to="/contador" className="font-bold text-2xl text-blue-700">Contador</Link> 
           <Link to="/todo" className="font-bold text-2xl text-blue-700">Lista-Todo</Link> 
+          <Link to="/reducer" className="font-bold text-2xl text-blue-700">Reducer </Link>
         </div>
 
         <Routes>
@@ -36,6 +38,7 @@ function App() {
           <Route path="/componente-controlado" exact element = {<ControlledComponent/>}/>
           <Route path="/contador" exact element = {<CounterComponent/>}/>
           <Route path="/todo" exact element = {<TodoList/>}/>
+          <Route path="/reducer" exact element={<ReducerComponent />} />
         </Routes>
 
 
